@@ -3,6 +3,8 @@
   <head>
     <title>Education</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="functions-min.js" ></script>
+
   </head>
 
 
@@ -37,26 +39,42 @@
               </div>
               <!-- Simple form setup: formspree.io -->
               <form class="contact__form">
+                
                 <input
                   class="contact__form-el contact__form-el--name"
                   type="text"
                   placeholder="Your Name"
                   spellcheck="false"
+                  id="nom"
+                  
+                  onkeyup="nameValidation()"
                 />
+                <p id="nomerror" ></p>
                 <input
                   class="contact__form-el contact__form-el--email"
                   type="email"
                   placeholder="Your Email"
                   spellcheck="false"
+                  id="email"
+                  onkeyup="emailValidation()"
+
+                  
                 />
+                <p id="emailerror"></p>
                 <textarea
                   class="contact__form-el contact__form-el--message"
                   placeholder="Your Message"
+                  id="msg"
+                  onclick="msgValidation()"
+
+
                 ></textarea>
+                <p id="msgerror"></p>
                 <input
                   class="contact__form-el contact__form-el--submit"
                   type="submit"
                   value="Send"
+                  onclick="validateForm()"
                 />
               </form>
             </div>
@@ -72,7 +90,7 @@
         <!-- SECTION: Footer -->
     <footer class="footer">
       <div class="footer__wrapper wrapper--large">
-        <p class="footer__copyright no-margin">&copy; 2022 -Esprit</p>
+        <p class="footer__copyright no-margin">&copy; 2023 -Esprit</p>
         <div class="footer__contacts">
           <a href="tel:+123456789"><i class="fas fa-phone-alt"></i> Téléphone: (+216)94589832</a>
           <a href="mailto:mehri.mariem@esprit.tn"> Email: mehri.mariem@esprit.tn</a>

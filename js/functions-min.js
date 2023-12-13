@@ -74,7 +74,7 @@ function nameValidation() {
     var nomError = document.getElementById('nomerror');
     
     if (nom.length < 3 || !/^[A-Za-z]+$/.test(nom)) {
-        nomError.textContent = 'Le nom doit contenir au moins trois caractères et seulement des lettres.';
+        nomError.textContent = 'The name must contain at least three characters and only letters';
         nomError.style.color = 'rgb(229, 147, 147)';
         return false; // Retourne false si la validation échoue
     } else {
@@ -88,7 +88,7 @@ function emailValidation() {
     var emailError = document.getElementById('emailerror');
 
     if (!/(?=.*[a-z])(?=.*\d).{10,}/i.test(email)) {
-        emailError.textContent = 'L\'email doit contenir au moins une minuscule, un chiffre et avoir une longueur d\'au moins 10 caractères';
+        emailError.textContent = 'The email must contain at least one lowercase letter, one number, and have a length of at least 10 characters';
         emailError.style.color = 'rgb(229, 147, 147)';
         return false;
     } else {
@@ -102,7 +102,7 @@ function msgValidation() {
     var msgError = document.getElementById('msgerror');
 
     if (msg.trim() === '') {
-        msgError.textContent = 'Veuillez remplir le champ de message.';
+        msgError.textContent = 'Please fill in the message field';
         msgError.style.color = 'rgb(229, 147, 147)';
         return false;
     } else {
@@ -118,9 +118,9 @@ function validateForm() {
 
     // Vérifie si toutes les validations sont correctes
     if (NameValid && EmailValid && MsgValid) {
-        alert(' j\'ai bien reçu votre message ');
+        alert(' I have received your message ');
     } else {
-        alert('Veuillez remplir correctement toutes les informations.');
+        alert('Please correctly fill in all the information.');
     }
 }
 
